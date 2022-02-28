@@ -1,0 +1,38 @@
+{
+  "name": "Drone warning removal Extension",
+  "description": "Remove the annoying warning toaster!",
+  "version": "0.1",
+  "author": "Elias Krontiris",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://drone2.in.globalwebindex.com/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/16.png",
+      "32": "/images/32.png",
+      "48": "/images/48.png",
+      "128": "/images/128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/16.png",
+    "32": "/images/32.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+  },
+  "options_page": "options.html"
+}
